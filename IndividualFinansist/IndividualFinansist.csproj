@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +56,215 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Administration\RegistrationUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Administration\RegistrationUser.Designer.cs">
+      <DependentUpon>RegistrationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ShowAllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\ShowAllUsers.Designer.cs">
+      <DependentUpon>ShowAllUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\UpdateFormRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\UpdateFormRegistration.Designer.cs">
+      <DependentUpon>UpdateFormRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\FinansedOperationInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\FinansedOperationInsert.Designer.cs">
+      <DependentUpon>FinansedOperationInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\MoneySizeInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\MoneySizeInsert.Designer.cs">
+      <DependentUpon>MoneySizeInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\OrganizationInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\OrganizationInsert.Designer.cs">
+      <DependentUpon>OrganizationInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\MoneyInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\MoneyInsert.Designer.cs">
+      <DependentUpon>MoneyInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\PassportInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\InsertFormForControlFormTwo\PassportInsert.Designer.cs">
+      <DependentUpon>PassportInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateFinansedOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateFinansedOperation.Designer.cs">
+      <DependentUpon>UpdateFinansedOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateMoney.Designer.cs">
+      <DependentUpon>UpdateMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateMoneySize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateMoneySize.Designer.cs">
+      <DependentUpon>UpdateMoneySize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateOrganization.Designer.cs">
+      <DependentUpon>UpdateOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdatePassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdatePassport.Designer.cs">
+      <DependentUpon>UpdatePassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\AvtorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\AvtorizationForm.Designer.cs">
+      <DependentUpon>AvtorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\ConnectionDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\ConnectionDB.Designer.cs">
+      <DependentUpon>ConnectionDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\ControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\ControlForm.Designer.cs">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\ControlFormTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\ControlFormTwo.Designer.cs">
+      <DependentUpon>ControlFormTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\NavigationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\NavigationForm.Designer.cs">
+      <DependentUpon>NavigationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlForm\InsertFormForControlForm\BankInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlForm\InsertFormForControlForm\BankInsert.Designer.cs">
+      <DependentUpon>BankInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlForm\InsertFormForControlForm\MinusInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlForm\InsertFormForControlForm\MinusInsert.Designer.cs">
+      <DependentUpon>MinusInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlForm\InsertFormForControlForm\PlusInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlForm\InsertFormForControlForm\PlusInsert.Designer.cs">
+      <DependentUpon>PlusInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormsForControlForm\UpdateFormForControlForm\UpdateBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlForm\UpdateFormForControlForm\UpdateBank.Designer.cs">
+      <DependentUpon>UpdateBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlForm\UpdateFormForControlForm\UpdateMinus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlForm\UpdateFormForControlForm\UpdateMinus.Designer.cs">
+      <DependentUpon>UpdateMinus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForControlForm\UpdateFormForControlForm\UpdatePlus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForControlForm\UpdateFormForControlForm\UpdatePlus.Designer.cs">
+      <DependentUpon>UpdatePlus.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administration\RegistrationUser.resx">
+      <DependentUpon>RegistrationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\ShowAllUsers.resx">
+      <DependentUpon>ShowAllUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\UpdateFormRegistration.resx">
+      <DependentUpon>UpdateFormRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\InsertFormForControlFormTwo\FinansedOperationInsert.resx">
+      <DependentUpon>FinansedOperationInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\InsertFormForControlFormTwo\MoneyInsert.resx">
+      <DependentUpon>MoneyInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\InsertFormForControlFormTwo\MoneySizeInsert.resx">
+      <DependentUpon>MoneySizeInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\InsertFormForControlFormTwo\OrganizationInsert.resx">
+      <DependentUpon>OrganizationInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\InsertFormForControlFormTwo\PassportInsert.resx">
+      <DependentUpon>PassportInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateFinansedOperation.resx">
+      <DependentUpon>UpdateFinansedOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateMoney.resx">
+      <DependentUpon>UpdateMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateMoneySize.resx">
+      <DependentUpon>UpdateMoneySize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdateOrganization.resx">
+      <DependentUpon>UpdateOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlFormTwo\UpdateFormForControlFormTwo\UpdatePassport.resx">
+      <DependentUpon>UpdatePassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\AvtorizationForm.resx">
+      <DependentUpon>AvtorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\ConnectionDB.resx">
+      <DependentUpon>ConnectionDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\ControlForm.resx">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\ControlFormTwo.resx">
+      <DependentUpon>ControlFormTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\NavigationForm.resx">
+      <DependentUpon>NavigationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlForm\InsertFormForControlForm\BankInsert.resx">
+      <DependentUpon>BankInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlForm\InsertFormForControlForm\MinusInsert.resx">
+      <DependentUpon>MinusInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlForm\InsertFormForControlForm\PlusInsert.resx">
+      <DependentUpon>PlusInsert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +273,18 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FormsForControlForm\UpdateFormForControlForm\UpdateBank.resx">
+      <DependentUpon>UpdateBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlForm\UpdateFormForControlForm\UpdateMinus.resx">
+      <DependentUpon>UpdateMinus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForControlForm\UpdateFormForControlForm\UpdatePlus.resx">
+      <DependentUpon>UpdatePlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,5 +298,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\kisspng-clip-art-portable-network-graphics-computer-icons-our-process-1-24x1-5d2368e39b6c10.6861182015626016996366.jpg" />
+    <None Include="Resources\clockwise-arrow-512.png" />
+    <None Include="Resources\204-2047982_refresh-reload-cycle-arrows-green-yellow-refresh-symbol.png" />
+    <None Include="Resources\magnify-147244_1280.png" />
+    <None Include="Resources\back-1689836_1280.png" />
+    <None Include="Resources\kisspng-tango-desktop-project-computer-icons-clip-art-5ae0bbbd4c9348.1171367315246775653137.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
